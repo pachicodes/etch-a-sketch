@@ -1,0 +1,64 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background: white;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 91, 70, 1) 100%
+  );
+}
+
+button {
+  background: #3d94f6;
+  background-image: -o-linear-gradient(top, #3d94f6, #1e62d0);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 40px;
+  padding: 40px;
+  box-shadow: 1px 1px 20px 0 #000000;
+  text-shadow: 1px 1px 20px #000000;
+  border: solid #337fed 1px;
+
+  cursor: pointer;
+  text-align: center;
+}
+
+canvas {
+  border: 30px solid #080808;
+  border-radius: 10px;
+  /* Set the width and height to half the actual size so it doesn't look pixelated */
+  width: 800px;
+  height: 500px;
+  background: white;
+}
+
+canvas.shake {
+  animation: shake 0.5s linear 1;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
